@@ -10,13 +10,13 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CluesWeaponsServlets
  */
-public class CluesWeaponsServlets extends HttpServlet {
+public class CluesWeaponsServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public CluesWeaponsServlets() {
+    public CluesWeaponsServlet() {
         // TODO Auto-generated constructor stub
     }
 
