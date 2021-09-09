@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L'armoire des pièces à conviction</title>
+<title>L'armoire des piï¿½ces ï¿½ conviction</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 	<main>
 		<h1>Warlock Holmes</h1>
 
-		<h2>L'amoire des pièces à conviction</h2>
+		<h2>L'amoire des piï¿½ces ï¿½ conviction</h2>
 
 		<div class="clues-left-nav">
 			<%@include file="adminnav.jsp"%>
@@ -27,12 +27,12 @@
 
 		<div class="clues-main-closet">
 			<p>Ici, tu peux farfouiller parmi les gourdins, les potions, les
-				pièces à conviction, les armes... Bref, les indices !</p>
+				piï¿½ces ï¿½ conviction, les armes... Bref, les indices !</p>
 			<div class="clues-list">
-				<!-- Pour chaque item de la list clues, générer : -->
+				<!-- Pour chaque item de la list clues, gï¿½nï¿½rer : -->
 				<div class="clues-list-item">
 					<img alt="Description de l'indice" src="" />
-					<p>Cette part de pizza verte a été trouvée chez Jojo le Nain
+					<p>Cette part de pizza verte a ï¿½tï¿½ trouvï¿½e chez Jojo le Nain
 						mardi soir.</p>
 				</div>
 			</div>
