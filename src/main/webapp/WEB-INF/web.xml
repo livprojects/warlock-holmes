@@ -39,4 +39,14 @@
     <servlet-name>CluesWeaponsServlets</servlet-name>
     <url-pattern>/CluesWeaponsServlets</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SuspectsServlet</display-name>
+    <servlet-name>SuspectsServlet</servlet-name>
+    <servlet-class>fr.formation.servlets.SuspectsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SuspectsServlet</servlet-name>
+    <url-pattern>/SuspectsServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
