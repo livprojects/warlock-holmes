@@ -6,8 +6,7 @@
 <link rel="stylesheet" href="/warlock-holmes/assets/narrativenav.css">
 </head>
 
-<div>
-	<div>
+<div class="div-nav">
 		<nav class="nav-block">
 			<div class="nav-block-img">
 				<img src="https://www.mamytwink.com/upload/news/2019/mai/15/thrall-cinematique-wow.jpg" alt="Illustration et lien vers le bureau des plaintes" /> 
@@ -29,6 +28,5 @@
 			</div>
 
 		</nav>
-	</div>
 </div>
 </html>
