@@ -39,6 +39,10 @@ public class Plainte {
 		this.setUrlIllustration(urlIllustration);
 	}
 	
+	public Plainte() {
+		
+	}
+	
 	
 	
 	
