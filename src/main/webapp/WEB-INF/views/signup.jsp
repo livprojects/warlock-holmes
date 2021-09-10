@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,35 +27,28 @@
 		
 		<div class="form-body">
 			<div class="form-group firstname">
-				<label for="firstname">Prenom : </label> <input type="text"
-					class="form-control" name="firstname" value="${user.prenom}"
-					id="firstname" />
+				<label for="firstname">Prenom : </label> 
+				<input type="text" name="firstname" id="firstname" />
 			</div>
 			
-			<div class="form-group familyname">
-				<label for="familyname">Nom de famille : </label> <input type="text"
-					class="form-control" name="lastname" value="${user.nom}"
-					id="familyname" />
+			<div class="form-group name">
+				<label for="name">Nom : </label> 
+				<input type="text" name="name" id="name" />
 			</div>
 
-			<div class="form-group userpseudonym">
-				<label for="userpseudonym">Pseudonyme :<span
-					class="text-danger">*</span></label> <input type="text"
-					class="form-control" name="pseudo" value="${user.pseudo}"
-					id="userpseudonym" />
+			<div class="form-group pseudo">
+				<label for="name">Pseudo : </label> 
+				<input type="text" name="pseudo" id="pseudo" />
 			</div>
 			
 			<div class="form-group email">
-				<label for="email">E-mail :<span class="text-danger">*</span></label>
-				<input type="email" class="form-control" name="mail" id="email"
-					value="${user.email}" />
+				<label for="name">Email : </label> 
+				<input type="text" name="email" id="email" />
 			</div>
 
 			<div class="form-group password">
-				<label for="password">Mot de passe :<span
-					class="text-danger">*</span></label> <input type="password"
-					class="form-control" name="password" id="password"
-					value="${user.password}" />
+				<label for="password">Mot de passe : </label> 
+				<input type="text" name="password" id="password" />
 			</div>
 
 			<div class="form-submit">
