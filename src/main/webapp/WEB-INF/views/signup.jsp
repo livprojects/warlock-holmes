@@ -31,12 +31,12 @@
 					class="form-control" name="firstname" value="${user.prenom}"
 					id="firstname" />
 			</div>
+			
 			<div class="form-group familyname">
 				<label for="familyname">Nom de famille : </label> <input type="text"
 					class="form-control" name="lastname" value="${user.nom}"
 					id="familyname" />
 			</div>
-			<div class="form-group"></div>
 
 			<div class="form-group userpseudonym">
 				<label for="userpseudonym">Pseudonyme :<span
@@ -44,6 +44,7 @@
 					class="form-control" name="pseudo" value="${user.pseudo}"
 					id="userpseudonym" />
 			</div>
+			
 			<div class="form-group email">
 				<label for="email">E-mail :<span class="text-danger">*</span></label>
 				<input type="email" class="form-control" name="mail" id="email"
