@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<main> 
+
+<!-- Nav bar -->
+		<div class="home-admin-nav">
+			<%@include file="adminnav.jsp"%>
+		</div>
+		<div class="home-narr-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
+
 <form method="POST">
 
 
@@ -54,6 +64,8 @@
 		</div>
 	</form>
 
-
+</main>
 </body>
+<!-- Footer contact et CopyRight -->
+	<footer class="contact-copyright"> Mentions légales Warlock Holmes </footer>
 </html>
