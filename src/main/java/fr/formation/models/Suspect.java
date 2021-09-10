@@ -6,12 +6,14 @@ public class Suspect {
 	private String prenom;
 	private String occupation;
 	private String alibi;
+	private String urlPhoto;
 	
-	public Suspect(String nom, String prenom, String occupation, String alibi) {
+	public Suspect(String nom, String prenom, String occupation, String alibi, String urlPhoto) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.occupation = occupation;
 		this.alibi = alibi;
+		this.urlPhoto = urlPhoto;
 	}
 	
 	public String getNom() {
@@ -37,5 +39,13 @@ public class Suspect {
 	}
 	public void setAlibi(String alibi) {
 		this.alibi = alibi;
+	}
+
+	public String getUrlPhoto() {
+		return urlPhoto;
+	}
+
+	public void setUrlPhoto(String urlPhoto) {
+		this.urlPhoto = urlPhoto;
 	}	
 }
