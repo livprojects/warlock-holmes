@@ -2,7 +2,6 @@
 	pageEncoding="ISO-8859-1"%>
 <html lang="fr">
 <head>
-<base href="/warlock-holmes" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Warlock Holmes : Un Cluedo revisité super fun !</title>
