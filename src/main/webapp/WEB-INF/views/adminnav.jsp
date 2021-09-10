@@ -7,7 +7,7 @@
 <head>
 <link rel="stylesheet" href="/warlock-holmes/assets/adminnav.css">
 </head>
-<div>
+<div class="div-nav">
 	<nav>
 		<ul class="nav-ul">
 			<li><a href="#">Mes parties</a></li>

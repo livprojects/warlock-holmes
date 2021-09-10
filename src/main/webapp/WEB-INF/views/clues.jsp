@@ -8,22 +8,24 @@
 <meta charset="ISO-8859-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/warlock-holmes/assets/style.css">
+
 <title>L'armoire des pièces à conviction</title>
 </head>
 
 <body>
 
-	<main>
+	<header>
 		<h1>Warlock Holmes</h1>
 
 		<h2>L'armoire des pièces à conviction</h2>
+	</header>
 
+	<main>
 		<div class="clues-left-nav">
 			<%@include file="adminnav.jsp"%>
 		</div>
-		<div class="clues-right-nav">
-			<%@include file="narrativenav.jsp"%>
-		</div>
+
 
 		<div class="clues-main-closet">
 			<p>Ici, tu peux farfouiller parmi les gourdins, les potions, les
@@ -38,6 +40,10 @@
 			</div>
 		</div>
 
+
+		<div class="clues-right-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
 	</main>
 
 </body>
