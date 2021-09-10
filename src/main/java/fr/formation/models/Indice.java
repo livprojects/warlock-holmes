@@ -2,16 +2,32 @@ package fr.formation.models;
 
 public class Indice {
 
-	private String text;
+	private String description;
+	private String imageUrl;
 	
-	public Indice(String text) {
-		this.text = text;
+	public Indice(String description, String imageUrl) {
+		super();
+		this.description = description;
+		this.imageUrl = imageUrl;
 	}
 
-	public String getText() {
-		return text;
+	public String getDescription() {
+		return description;
 	}
-	public void setText(String text) {
-		this.text = text;
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+	
+	
+	
+
 }
