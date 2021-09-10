@@ -1,38 +1,40 @@
 package fr.formation.models;
 
-import java.util.List;
 
 public class Affaire {
 
-	private List<Suspect> suspects;
-	private List<Indice> indices;
-	private List<Plainte> plaintes;
+	private Plainte plainte;
+	private Suspect coupable;
+	private Indice pieceAConviction;
 	
-	public Affaire(List<Suspect> suspects, List<Indice> indices, List<Plainte> plaintes) {
+	
+	public Plainte getPlainte() {
+		return plainte;
+	}
+	public void setPlainte(Plainte plainte) {
+		this.plainte = plainte;
+	}
+	public Suspect getCoupable() {
+		return coupable;
+	}
+	public void setCoupable(Suspect coupable) {
+		this.coupable = coupable;
+	}
+	public Indice getIndice() {
+		return pieceAConviction;
+	}
+	public void setIndice(Indice indice) {
+		this.pieceAConviction = indice;
+	}
+	
+	public Affaire(Plainte plainte, Suspect coupable, Indice indice) {
 		super();
-		this.suspects = suspects;
-		this.indices = indices;
-		this.plaintes = plaintes;
+		this.plainte = plainte;
+		this.coupable = coupable;
+		this.pieceAConviction = indice;
 	}
 	
-	// Est-ce qu'on ferait pas une fonction pour mélanger une liste de type générique et renvoyer X éléments ?
 	
-	public List<Suspect> getSuspects() {
-		return suspects;
-	}
-	public void setSuspects(List<Suspect> suspects) {
-		this.suspects = suspects;
-	}
-	public List<Indice> getIndices() {
-		return indices;
-	}
-	public void setIndices(List<Indice> indices) {
-		this.indices = indices;
-	}
-	public List<Plainte> getPlaintes() {
-		return plaintes;
-	}
-	public void setPlaintes(List<Plainte> plaintes) {
-		this.plaintes = plaintes;
-	}
+	
+
 }
