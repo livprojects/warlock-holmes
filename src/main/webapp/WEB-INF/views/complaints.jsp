@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@ page import="fr.formation.models.Plainte"%>
+ <%@ page import="fr.formation.models.Plainte"%>
 <%@ page import="java.util.List"%>
 
 <%
  List <Plainte> complaints = (List <Plainte>)request.getAttribute("complaints");
-%>
-
+%> 
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,17 +33,18 @@
 			<%@include file="adminnav.jsp"%>
 		</div>
 
+<%= complaints %>
 
 		<div class="clues-main-closet">
 		<p>Tu es ici au point de départ de l'enquête. Sur ce tableau, tu trouveras toutes les affaires que nous avons enregistrées et qui n'ont pas encore été résolues à ce jour.</p>
-		<% for (Plainte plainte : complaints) {
+  		<% for (Plainte plainte : complaints) {
 			%>
 			
 			<div class="plainte">
 				<p>Nom du ou de la plaignante : <%= plainte.getPlaignant() %></p>
 				<p>Procès verbal : <%= plainte.getProcesVerbal() %></p>		
 			</div>
-			<% 	} %>	
+			<% 	} %>	 
 		</div>
 
 

@@ -27,6 +27,7 @@ public class CaseCreationService {
 		premierePlainte.setUrlIllustration("https://cdn.vegaooparty.com/images/rep_art/gra/235/9/235927/gourdin-gonflable_235927.jpg");
 		plaintes.add(deuxiemePlainte);
 		
+		System.out.println("PLAINTES - " + plaintes);
 		return plaintes;
 		
 	}
