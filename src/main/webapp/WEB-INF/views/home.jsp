@@ -9,17 +9,15 @@
 
 </head>
 <body>
-
-	<div class="main-content-block">
-
-		<div class="header">
-			<!-- Menu de navigation -->
-			<nav class="eb-navmenu">
-				<!--  TODO  -->
-
-			</nav>
+	<main> 
 
 		<!-- Nav bar -->
+		<div class="home-admin-nav">
+			<%@include file="adminnav.jsp"%>
+		</div>
+		<div class="home-narr-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
 
 
 		<h1>Warlock Holmes</h1>
@@ -30,6 +28,8 @@
 		<!-- Centre de la page : Bienvenue et tuto -->
 		<section class="eb-container">
 			<h2>Warlock Holmes : Un Cluedo revisité super fun !</h2>
+			
+			
 
 			<p class="welcome">Lorem ipsum dolor sit amet consectetur
 				adipisicing elit. Perspiciatis non voluptatum laborum totam
@@ -53,11 +53,11 @@
 				Quibusdam nisi fugit quo est. Lorem ipsum ad minim ven. Lorem ipsum
 				dolor sit amet.</p>
 
-			<h2>Débutez votre enquête avec Warlock Holmes !</h2>
+			<h3>Débutez votre enquête avec Warlock Holmes !</h3>
 			
 			<button onclick="/signup">Je m'inscris !</button>
 			
-			<h2> Vous êtes déjà détective chez nous ? Connectez-vous !</h2>
+			<h3> Vous êtes déjà détective chez nous ? Connectez-vous !</h3>
 			
 			<button onclick="/login">Je m'identifie !</button>
 
@@ -67,7 +67,7 @@
 		
 
 	</div>
-
+	</main>
 
 	<!-- Footer contact et CopyRight -->
 	<footer class="contact-copyright"> Mentions légales Warlock Holmes </footer>
