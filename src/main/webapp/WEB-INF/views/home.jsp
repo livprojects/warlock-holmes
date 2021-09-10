@@ -4,22 +4,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/warlock-holmes/assets/style.css">
 <title>Warlock Holmes : Un Cluedo revisité super fun !</title>
 
 </head>
 <body>
+
+	<header>
+	<h1> Warlock Holmes</h1>
+	</header>
 	<main> 
 
 		<!-- Nav bar -->
-		<div class="home-admin-nav">
+		<div class="clues-left-nav">
 			<%@include file="adminnav.jsp"%>
 		</div>
-		<div class="home-narr-nav">
-			<%@include file="narrativenav.jsp"%>
-		</div>
-
-
-		<h1>Warlock Holmes</h1>
+		
 		
 		<div class=admin-nav> 
 		</div>
@@ -65,7 +65,9 @@
 		
 		
 
-	</div>
+	<div class="clues-right-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
 	</main>
 
 	<!-- Footer contact et CopyRight -->

@@ -3,21 +3,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<style>
-.button{
-	background-color: red;
-	color:white;
-	padding: 15px 32px;
-  	text-align: center;
-} 
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/warlock-holmes/assets/style.css">
 <title>Les suspects</title>
 </head>
 <body>
+	<header> 
+	<h1> Les suspects </h1>
+	</header>
 	<main>
 	
-	<h1> Les suspects </h1>
+	<!-- Nav bar -->
+		<div class="clues-left-nav">
+			<%@include file="adminnav.jsp"%>
+		</div>
+		
 	
 	<p> Voici les suspects identifiés ! </p>
 	<p> N'hésitez pas à les interroger afin de trouver le coupable </p>
@@ -62,6 +62,9 @@
 		
 		</section>
 		
+		<div class="clues-right-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
 		</main>
 
 </body>

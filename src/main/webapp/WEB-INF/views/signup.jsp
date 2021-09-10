@@ -3,27 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/warlock-holmes/assets/style.css">
 <title>Inscription</title>
 </head>
 <body>
 
+<header>
+<h1>Inscription au bureau des détectives </h1>
+<p>Merci de remplir le formulaire suivant pour vous inscrire et commencer à enquêter</p>
+</header>
+
 <main> 
 
 <!-- Nav bar -->
-		<div class="home-admin-nav">
+		<div class="clues-left-nav">
 			<%@include file="adminnav.jsp"%>
 		</div>
-		<div class="home-narr-nav">
-			<%@include file="narrativenav.jsp"%>
-		</div>
+		
 
 <form method="POST">
-
-
-		<h1>Inscription au bureau des détectives </h1>
-		<p>Merci de remplir le formulaire suivant pour vous inscrire et commencer à enquêter</p>
-
 		
 		<div class="form-body">
 			<div class="form-group firstname">
@@ -64,6 +63,10 @@
 			</div>
 		</div>
 	</form>
+	
+	<div class="clues-right-nav">
+			<%@include file="narrativenav.jsp"%>
+		</div>
 
 </main>
 </body>
