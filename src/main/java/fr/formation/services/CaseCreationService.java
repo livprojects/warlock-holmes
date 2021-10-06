@@ -1,4 +1,4 @@
-package fr.formation.services;
+package src.main.java.fr.formation.services;
 
 import java.util.ArrayList;
 import java.util.List;

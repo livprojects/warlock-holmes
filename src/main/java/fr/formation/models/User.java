@@ -1,4 +1,4 @@
-package fr.formation.models;
+package src.main.java.fr.formation.models;
 
 public class User {
 

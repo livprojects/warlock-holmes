@@ -1,4 +1,4 @@
-package fr.formation.servlets;
+package src.main.java.fr.formation.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
