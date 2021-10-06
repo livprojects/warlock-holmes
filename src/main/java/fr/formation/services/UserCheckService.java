@@ -1,5 +1,5 @@
-package src.main.java.fr.formation.services;
+package fr.formation.services;
 
 public class UserCheckService {
-	// TODO Un service pour vérifier l'utilisateur
+	// TODO Un service pour vï¿½rifier l'utilisateur
 }

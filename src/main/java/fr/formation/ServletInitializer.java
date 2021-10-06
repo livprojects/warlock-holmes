@@ -1,4 +1,4 @@
-package src.main.java.fr.formation;
+package fr.formation;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
