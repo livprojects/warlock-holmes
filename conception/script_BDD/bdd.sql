@@ -3,7 +3,7 @@
 -- USE db_name;
 
 CREATE TABLE Player(
-	id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	id SERIAL PRIMARY KEY,
 	name varchar(50),
 	surname varchar(50),
 	pseudo varchar(50),
@@ -11,7 +11,7 @@ CREATE TABLE Player(
 	password varchar(25)
 );
 
-INSERT INTO Player VALUES ('Saraya', 'Chak', 'Saraya', 'sarayachak.com', 'secret');
+INSERT INTO Player(name, surname, pseudo, email, password) VALUES ('Saraya', 'Chak', 'Saraya', 'sarayachak.com', 'secret');
 INSERT INTO Player VALUES ('Liv', 'Audigane', 'Lili', 'livaudi.com', 'admin');
 INSERT INTO Player VALUES ('Jonathan', 'Triqueneau', 'JojoTrinqueno', 'jojo.com', 'admin');
 
