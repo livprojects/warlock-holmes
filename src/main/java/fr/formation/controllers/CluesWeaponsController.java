@@ -1,6 +1,5 @@
 package fr.formation.controllers;
 
-import java.io.IOException;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,12 +11,17 @@ import fr.formation.models.Indice;
 
 
 @RestController
-@RequestMapping("/clues")
+@RequestMapping("/api/clues")
 public class CluesWeaponsController {
 	
 
+	@GetMapping("/test")
+	public String test() {
+		return "coucou";
+	}
+	
     @GetMapping("/id")
-	private Indice findOne(UUID id) {
+	public Indice findOne(UUID id) {
 		return null;
 		//TODO Appel DAO
 	}
