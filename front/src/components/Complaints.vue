@@ -4,14 +4,14 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Complaints',
   data() {
     return {
       msg: ''
     }
   },
   mounted() {
-    fetch("/api/clues/test")
+    fetch("/api/complaints/")
       .then((response) => response.text())
       .then((data) => {
           this.msg = data;
@@ -19,3 +19,7 @@ export default {
   }
 }
 </script>
+
+<style>
+@import '../assets/css/complaints.css';
+</style>
