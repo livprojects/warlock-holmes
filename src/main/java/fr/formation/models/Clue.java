@@ -5,13 +5,11 @@ import lombok.Data;
 
 @AllArgsConstructor
 @Data
-public class Affaire {
-
-	private Complaint complaint_id;
-	private Suspect suspect_id;
-	private Clue clue_id;
-
+public class Clue {
 	
-	
+	private Integer id;
+	private String description;
+	private String imageUrl;
+
 
 }

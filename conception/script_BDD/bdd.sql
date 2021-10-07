@@ -12,20 +12,22 @@ CREATE TABLE Player(
 );
 
 INSERT INTO Player(name, surname, pseudo, email, password) VALUES ('Saraya', 'Chak', 'Saraya', 'sarayachak.com', 'secret');
-INSERT INTO Player VALUES ('Liv', 'Audigane', 'Lili', 'livaudi.com', 'admin');
-INSERT INTO Player VALUES ('Jonathan', 'Triqueneau', 'JojoTrinqueno', 'jojo.com', 'admin');
+INSERT INTO Player(name, surname, pseudo, email, password) VALUES ('Liv', 'Audigane', 'Lili', 'livaudi.com', 'admin');
+INSERT INTO Player(name, surname, pseudo, email, password) VALUES ('Jonathan', 'Triqueneau', 'JojoTrinqueno', 'jojo.com', 'admin');
 
 
 
-CREATE TABLE Complaints(
+CREATE TABLE Complaint(
 	id INTEGER NOT NULL UNIQUE GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	plaintiveName varchar(50),
 	report varchar(255),
-	urlIllustration varchar(100)
+	linkedCase integer,
+	urlIllustration varchar(100),
+	FOREIGN KEY (linkedCase) REFERENCES Affaire(id)
 	
 );
 
-INSERT INTO Complaints(plaintiveName, report, urlIllustration) VALUES ('John Duff', 'Lorem ipsum blablablou', 'blabla');
+INSERT INTO Complaint(plaintiveName, report, urlIllustration) VALUES ('John Duff', 'Lorem ipsum blablablou', 'blabla');
 
 
 CREATE TABLE Suspect(
@@ -55,6 +57,16 @@ CREATE TABLE ClueSuspectRelation(
 	SuspectId Int NOT NULL UNIQUE,
 	FOREIGN KEY (ClueId) REFERENCES Clue(id),
 	FOREIGN KEY (SuspectId) REFERENCES Suspect(id)
+);
+
+CREATE TABLE Affaire(
+	id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	complaint_id int,
+	suspect_id int,
+	clue_id int,
+	FOREIGN KEY (complaint_id) references complaints(id),
+	FOREIGN KEY (suspect_id) references suspect(id),
+	FOREIGN KEY (clue_id) references clue(id)
 );
 
 --------------------------------------------------------------------------------
