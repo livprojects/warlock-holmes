@@ -1,5 +1,6 @@
 package fr.formation.models;
 
+<<<<<<< HEAD
 import lombok.Data;
 
 @Data
@@ -33,4 +34,18 @@ public class Clue {
 		return 0;
 	}
 	
+=======
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
+public class Clue {
+	
+	private Integer id;
+	private String description;
+	private String imageUrl;
+
+
+>>>>>>> 02895f2810c343c75ff51a7a79e020dc22c5a9c4
 }

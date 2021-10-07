@@ -1,5 +1,6 @@
 package fr.formation.models;
 
+<<<<<<< HEAD
 import lombok.Data;
 
 
@@ -48,6 +49,20 @@ public class Complaint {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+=======
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
+public class Complaint {
+	
+	private Integer id;
+	private String plaintiveName;
+	private String report;
+	private Affaire linkedCase;
+	private String urlIllustration;	
+>>>>>>> 02895f2810c343c75ff51a7a79e020dc22c5a9c4
 	
 }
 
