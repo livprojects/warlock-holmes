@@ -1,22 +1,14 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Complaints></Complaints>
+    <div id="nav">
+      <!-- TODO : déplacer dans une nav -->
+      <!-- <router-link to="/">Accueil</router-link> |
+      <router-link to="/complaints">Bureau des plaintes</router-link> -->
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue';
-import Complaints from './components/Complaints.vue';
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld, 
-    Complaints
-  }
-}
-</script>
 
 <style>
 #app {
@@ -25,6 +17,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
