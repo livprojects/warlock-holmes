@@ -8,13 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.formation.models.Indice;
 
-
-
 @RestController
 @RequestMapping("/api/clues")
 public class CluesWeaponsController {
 	
-
 	@GetMapping("/test")
 	public String test() {
 		return "coucou";

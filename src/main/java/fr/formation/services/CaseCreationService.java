@@ -5,13 +5,15 @@ import java.util.List;
 
 import fr.formation.models.Plainte;
 
+// A vérifier si on vire ou pas 
+@Deprecated
 public class CaseCreationService {
 	
 	public List <Plainte> genererPlaintes() {
 		
 		List <Plainte> plaintes = new ArrayList<>();
 		
-		// Premi�re plainte //
+		// Première plainte //
 		
 		Plainte premierePlainte = new Plainte();
 		premierePlainte.setPlaignant("La m�re Mich�le");
@@ -19,7 +21,7 @@ public class CaseCreationService {
 		premierePlainte.setUrlIllustration("https://i.pinimg.com/originals/e5/cc/d4/e5ccd4fb842677612d9ee0644d718bbe.png");
 		plaintes.add(premierePlainte);
 		
-		// Deuxi�me plainte // 
+		// Deuxième plainte // 
 		
 		Plainte deuxiemePlainte = new Plainte();
 		premierePlainte.setPlaignant("Coco le Nain");
