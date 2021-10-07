@@ -7,33 +7,31 @@ import lombok.Data;
 @Data
 public class User {
 
-	private Integer id;
+	private int id;
 	private String name;
 	private String surname;
 	private String pseudo;
 	private String email;
 	private String password;
 	
-	public User(String nom, String prenom, String pseudo, String email, String password) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.pseudo = pseudo;
-		this.email = email;
-		this.password = password;
-	}
 	
-	public String getNom() {
-		return nom;
+	public int getId() {
+		return id;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getPrenom() {
-		return prenom;
+	public String getName() {
+		return name;
 	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 	public String getPseudo() {
 		return pseudo;
@@ -52,11 +50,6 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 	
 }

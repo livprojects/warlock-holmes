@@ -1,38 +1,38 @@
 package fr.formation.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @AllArgsConstructor
 @Data
 public class Suspect {
 
-	private Integer id;
+	private int id;
 	private String name;
 	private String surname;
 	private String occupation;
 	private String alibi;
 	private String urlPhoto;
 	
-	public Suspect(String nom, String prenom, String occupation, String alibi, String urlPhoto) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.occupation = occupation;
-		this.alibi = alibi;
-		this.urlPhoto = urlPhoto;
-	}
 	
-	public String getNom() {
-		return nom;
+	
+	public int getId() {
+		return id;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getPrenom() {
-		return prenom;
+	public String getName() {
+		return name;
 	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSurname() {
+		return surname;
+	}
+	public void setSurname(String surname) {
+		this.surname = surname;
 	}
 	public String getOccupation() {
 		return occupation;
@@ -51,11 +51,6 @@ public class Suspect {
 	}
 	public void setUrlPhoto(String urlPhoto) {
 		this.urlPhoto = urlPhoto;
-	}
-
-	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
 	}
 	
 }

@@ -9,11 +9,11 @@ import javax.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import fr.formation.dao.CaseDao;
-import fr.formation.models.Case;
+import fr.formation.dao.AffaireDao;
+import fr.formation.models.Affaire;
 
 @Component
-public class CaseDaoImpl implements CaseDao {
+public class AffaireDaoImpl implements AffaireDao {
 
 	// TODO 
 	//  Vérifier si c'est bon, j'ai suivi ça 
@@ -23,28 +23,28 @@ public class CaseDaoImpl implements CaseDao {
 	private final EntityManager entityManager = null;
 	
 	@Override
-	public Optional<Case> get(int id) {
-		return Optional.ofNullable(entityManager.find(Case.class, id));
+	public Optional<Affaire> get(int id) {
+		return Optional.ofNullable(entityManager.find(Affaire.class, id));
 	}
 
 	@Override
-	public List<Case> getAll() {
-		Query query = entityManager.createQuery("SELECT c FROM Case c");
+	public List<Affaire> getAll() {
+		Query query = entityManager.createQuery("SELECT c FROM Affaire c");
         return query.getResultList();
 	}
 	
 	@Override
-	public void add(Case affaire) {
+	public void add(Affaire affaire) {
 		entityManager.persist(affaire);
 	}
 	
 	@Override
-	public void update(Case affaire) {
+	public void update(Affaire affaire) {
 		entityManager.persist(affaire);
 	}
 
 	@Override
-	public void delete(Case affaire) {
+	public void delete(Affaire affaire) {
 		entityManager.remove(affaire);				
 	}
 

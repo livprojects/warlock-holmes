@@ -1,42 +1,42 @@
 package fr.formation.models;
 
-<<<<<<< HEAD
 import lombok.Data;
+import lombok.AllArgsConstructor;
 
-
+@AllArgsConstructor
 @Data
 public class Complaint {
 
-	private String plaignant;
-	private String procesVerbal;
-	private Case affaireLiee;
+	private int id;
+	private String plaintiveName;
+	private String report;
+	private Affaire linkedCase;
 	private String urlIllustration;
+
 	
-	public Complaint(String plaignant, String procesVerbal, Case affaireLiee, String urlIllustration) {
-		super();
-		this.plaignant = plaignant;
-		this.procesVerbal = procesVerbal;
-		this.affaireLiee = affaireLiee;
-		this.urlIllustration = urlIllustration;
+	public int getId() {
+		return id;
 	}
-	
-	public String getPlaignant() {
-		return plaignant;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public void setPlaignant(String plaignant) {
-		this.plaignant = plaignant;
+	public String getPlaintiveName() {
+		return plaintiveName;
 	}
-	public String getProcesVerbal() {
-		return procesVerbal;
+	public void setPlaintiveName(String plaintiveName) {
+		this.plaintiveName = plaintiveName;
 	}
-	public void setProcesVerbal(String procesVerbal) {
-		this.procesVerbal = procesVerbal;
+	public String getReport() {
+		return report;
 	}
-	public Case getAffaireLiee() {
-		return affaireLiee;
+	public void setReport(String report) {
+		this.report = report;
 	}
-	public void setAffaireLiee(Case affaireLiee) {
-		this.affaireLiee = affaireLiee;
+	public Affaire getLinkedCase() {
+		return linkedCase;
+	}
+	public void setLinkedCase(Affaire linkedCase) {
+		this.linkedCase = linkedCase;
 	}
 	public String getUrlIllustration() {
 		return urlIllustration;
@@ -44,25 +44,7 @@ public class Complaint {
 	public void setUrlIllustration(String urlIllustration) {
 		this.urlIllustration = urlIllustration;
 	}
-
-	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-=======
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-@AllArgsConstructor
-@Data
-public class Complaint {
-	
-	private Integer id;
-	private String plaintiveName;
-	private String report;
-	private Affaire linkedCase;
-	private String urlIllustration;	
->>>>>>> 02895f2810c343c75ff51a7a79e020dc22c5a9c4
+		
 	
 }
 
