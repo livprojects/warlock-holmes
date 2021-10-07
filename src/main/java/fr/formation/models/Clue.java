@@ -3,12 +3,13 @@ package fr.formation.models;
 import lombok.Data;
 
 @Data
-public class Indice {
+public class Clue {
 
+	
 	private String description;
 	private String imageUrl;
 	
-	public Indice(String description, String imageUrl) {
+	public Clue(String description, String imageUrl) {
 		super();
 		this.description = description;
 		this.imageUrl = imageUrl;
@@ -25,6 +26,11 @@ public class Indice {
 	}
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
+	}
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

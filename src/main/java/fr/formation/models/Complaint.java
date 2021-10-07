@@ -4,14 +4,14 @@ import lombok.Data;
 
 
 @Data
-public class Plainte {
+public class Complaint {
 
 	private String plaignant;
 	private String procesVerbal;
-	private Affaire affaireLiee;
+	private Case affaireLiee;
 	private String urlIllustration;
 	
-	public Plainte(String plaignant, String procesVerbal, Affaire affaireLiee, String urlIllustration) {
+	public Complaint(String plaignant, String procesVerbal, Case affaireLiee, String urlIllustration) {
 		super();
 		this.plaignant = plaignant;
 		this.procesVerbal = procesVerbal;
@@ -31,10 +31,10 @@ public class Plainte {
 	public void setProcesVerbal(String procesVerbal) {
 		this.procesVerbal = procesVerbal;
 	}
-	public Affaire getAffaireLiee() {
+	public Case getAffaireLiee() {
 		return affaireLiee;
 	}
-	public void setAffaireLiee(Affaire affaireLiee) {
+	public void setAffaireLiee(Case affaireLiee) {
 		this.affaireLiee = affaireLiee;
 	}
 	public String getUrlIllustration() {
@@ -42,6 +42,11 @@ public class Plainte {
 	}
 	public void setUrlIllustration(String urlIllustration) {
 		this.urlIllustration = urlIllustration;
+	}
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

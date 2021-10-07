@@ -1,12 +1,14 @@
 package fr.formation.repository;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 import fr.formation.models.User;
 
-public interface UserRepository {	
+public interface UserRepository extends Repository<User>{
 
-	User get(int id);
-	ArrayList<User> getAll();
+	Optional<User> get(User user);
+	List<User> getAll();
 	void add(User user);
 	void update(User user);
 	void remove(User user);

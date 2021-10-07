@@ -50,5 +50,10 @@ public class Suspect {
 	public void setUrlPhoto(String urlPhoto) {
 		this.urlPhoto = urlPhoto;
 	}
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

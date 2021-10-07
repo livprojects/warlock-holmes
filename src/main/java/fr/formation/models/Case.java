@@ -3,22 +3,31 @@ package fr.formation.models;
 import lombok.Data;
 
 @Data
-public class Affaire {
+public class Case {
 
-	private Plainte plainte;
+	private int id;
+	private Complaint plainte;
 	private Suspect coupable;
-	private Indice pieceAConviction;
+	private Clue pieceAConviction;
 	
-	public Affaire(Plainte plainte, Suspect coupable, Indice pieceAConviction) {
+	public Case(int id, Complaint plainte, Suspect coupable, Clue pieceAConviction) {
 		super();
+		this.id = id;
 		this.plainte = plainte;
 		this.coupable = coupable;
 		this.pieceAConviction = pieceAConviction;
 	}
-	public Plainte getPlainte() {
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Complaint getPlainte() {
 		return plainte;
 	}
-	public void setPlainte(Plainte plainte) {
+	public void setPlainte(Complaint plainte) {
 		this.plainte = plainte;
 	}
 	public Suspect getCoupable() {
@@ -27,10 +36,10 @@ public class Affaire {
 	public void setCoupable(Suspect coupable) {
 		this.coupable = coupable;
 	}
-	public Indice getPieceAConviction() {
+	public Clue getPieceAConviction() {
 		return pieceAConviction;
 	}
-	public void setPieceAConviction(Indice pieceAConviction) {
+	public void setPieceAConviction(Clue pieceAConviction) {
 		this.pieceAConviction = pieceAConviction;
 	}
 

@@ -50,5 +50,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

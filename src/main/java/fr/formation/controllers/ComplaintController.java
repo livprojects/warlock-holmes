@@ -8,19 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.formation.models.Plainte;
+import fr.formation.models.Complaint;
 import fr.formation.services.CaseCreationService;
 
 
 @RestController
 @RequestMapping("/complaints")
-public class PlaintesController  {
+public class ComplaintController  {
 
 	private CaseCreationService caseCreationService;
 
 
    @GetMapping
-	public List<Plainte> findAllPlaintes()  {
+	public List<Complaint> findAllPlaintes()  {
 		return null;
 		/*// TODO RANGER CA DANS LA BDD
 		

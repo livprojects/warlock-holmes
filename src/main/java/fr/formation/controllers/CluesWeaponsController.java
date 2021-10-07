@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.formation.models.Indice;
+import fr.formation.models.Clue;
 
 @RestController
 @RequestMapping("/api/clues")
@@ -18,7 +18,7 @@ public class CluesWeaponsController {
 	}
 	
     @GetMapping("/id")
-	public Indice findOne(UUID id) {
+	public Clue findOne(UUID id) {
 		return null;
 		//TODO Appel DAO
 	}
