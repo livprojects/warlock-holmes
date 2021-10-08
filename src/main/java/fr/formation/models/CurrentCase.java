@@ -11,8 +11,9 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@AllArgsConstructor
 @Data
 @Entity
 @Table(name = "current_case")
@@ -40,6 +41,22 @@ public class CurrentCase {
 	@OneToOne
 	@JoinColumn(name="current_case_clue_id")
 	private Clue clue_id;
+
+	public CurrentCase(int id, String plaintiveName, String report, String urlIllustration, Suspect suspect_id,
+			Clue clue_id) {
+		super();
+		this.id = id;
+		this.plaintiveName = plaintiveName;
+		this.report = report;
+		this.urlIllustration = urlIllustration;
+		this.suspect_id = suspect_id;
+		this.clue_id = clue_id;
+	}
+	
+	public CurrentCase() {
+		super();
+		
+	}
 	
 
 	

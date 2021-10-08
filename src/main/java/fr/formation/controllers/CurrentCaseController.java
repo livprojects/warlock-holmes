@@ -22,7 +22,7 @@ public class CurrentCaseController  {
 	@Autowired
 	private final CurrentCaseRepository currentCaseRepository = null;
 	
-	@GetMapping
+	@GetMapping("/list")
 	public List<CurrentCase> getAll(){
 		System.out.println("Arrivée dans le controller");
 		List<CurrentCase> plaintes = currentCaseRepository.getAll();

@@ -9,9 +9,9 @@ CREATE TABLE player(
 );
 
 
-INSERT INTO Player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Saraya', 'Chak', 'Saraya', 'sarayachak.com', 'secret');
-INSERT INTO Player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Liv', 'Audigane', 'Lili', 'livaudi.com', 'admin');
-INSERT INTO Player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Jonathan', 'Triqueneau', 'JojoTrinqueno', 'jojo.com', 'Marie');
+INSERT INTO player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Saraya', 'Chak', 'Saraya', 'sarayachak.com', 'secret');
+INSERT INTO player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Liv', 'Audigane', 'Lili', 'livaudi.com', 'admin');
+INSERT INTO player(player_name, player_surname, player_pseudo, player_email, player_pw) VALUES ('Jonathan', 'Triqueneau', 'JojoTrinqueno', 'jojo.com', 'Marie');
 
 
 CREATE TABLE suspect(
@@ -23,8 +23,8 @@ CREATE TABLE suspect(
     suspect_url_photo varchar(255)
 );
 
-INSERT INTO Suspect(suspect_name, suspect_nickname, suspect_occupation, suspect_alibi, suspect_url_photo) VALUES ('Sarah', 'Chakra', 'Directrice de M2i', 'Jétais pas au cinéma', 'blabla');
-INSERT INTO Suspect(suspect_name, suspect_nickname, suspect_occupation, suspect_alibi, suspect_url_photo) VALUES ('Cépamoi', 'Célui', 'Mangeuse de bonbon', 'La main bloquée dans la jare à cookies', 'nope');
+INSERT INTO suspect(suspect_name, suspect_nickname, suspect_occupation, suspect_alibi, suspect_url_photo) VALUES ('Sarah', 'Chakra', 'Directrice de M2i', 'Jétais pas au cinéma', 'blabla');
+INSERT INTO suspect(suspect_name, suspect_nickname, suspect_occupation, suspect_alibi, suspect_url_photo) VALUES ('Cépamoi', 'Célui', 'Mangeuse de bonbon', 'La main bloquée dans la jare à cookies', 'nope');
 
 CREATE TABLE clue(
     clue_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -32,8 +32,8 @@ CREATE TABLE clue(
     clue_image_url varchar(255)
 );
 
-INSERT INTO Clue(clue_id, clue_description, clue_image_url) VALUES ('Un couteau très coupant', 'blabla');
-INSERT INTO Clue(clue_id, clue_description, clue_image_url) VALUES ('Une mauvaise foi en acier trempé', 'bliblou');
+INSERT INTO clue(clue_description, clue_image_url) VALUES ('Un couteau très coupant', 'https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg');
+INSERT INTO clue(clue_description, clue_image_url) VALUES ('Une mauvaise foi en acier trempé', 'https://images-na.ssl-images-amazon.com/images/I/81BES+tsVvL.png');
 
 CREATE TABLE current_case(
     current_case_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -46,4 +46,4 @@ CREATE TABLE current_case(
     FOREIGN KEY (current_case_clue_id) references clue(clue_id)
 );
 
-INSERT INTO current_case(current_case_plaintive_name, current_case_report, current_case_url_illustration, current_case_suspect_id, current_case_clue_id) VALUES ('John Duff', 'Lorem ipsum blablablou', 'blabla', 0, 0);
+INSERT INTO current_case(current_case_plaintive_name, current_case_report, current_case_url_illustration) VALUES ('John Duff', 'Lorem ipsum blablablou', 'blabla');
