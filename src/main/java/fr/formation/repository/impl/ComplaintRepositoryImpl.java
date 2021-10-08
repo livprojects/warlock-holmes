@@ -3,10 +3,13 @@ package fr.formation.repository.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import fr.formation.dao.impl.ComplaintDaoImpl;
 import fr.formation.models.Complaint;
 import fr.formation.repository.ComplaintRepository;
 
+@Repository
 public class ComplaintRepositoryImpl implements ComplaintRepository {
 
 	private ComplaintDaoImpl complaintDaoImpl;
@@ -18,6 +21,7 @@ public class ComplaintRepositoryImpl implements ComplaintRepository {
 
 	@Override
 	public List<Complaint> getAll() {
+		System.out.println("Coucou");
 		return complaintDaoImpl.getAll();
 	}
 

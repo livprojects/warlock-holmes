@@ -3,10 +3,10 @@
           
              <div class="clues-main-closet">
              <p>Tu es ici au point de départ de l'enquête. Sur ce tableau, tu trouveras toutes les affaires que nous avons enregistrées et qui n'ont pas encore été résolues à ce jour.</p>               
-                 <div v-for="complaint in listeTest" :key="complaint.plaignant" class="plainte">
+                 <div v-for="complaint in complaintsList" :key="complaint.plaignant" class="plainte">
                      <p>Nom du ou de la plaignante : {{complaint.plaignant}}</p>
                      <p>Procès verbal : {{complaint.procesVerbal}} </p>		
-                      <img :src="complaint.urlIllustration"/>  
+                    <img :src="complaint.urlIllustration"/>  
                  </div>
              </div>
  </div>
@@ -29,16 +29,17 @@ export default {
         urlIllustration: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJMvPpFn8ZPh19QDb2JnwuXvgmmEUyMlJoKg&usqp=CAU"
         }
         ],
-    //   complaintsList: []
+       complaintsList: []
     }
   },
-//   mounted() {
-//     fetch("/api/complaints/")
-//       .then((response) => response.text())
-//       .then((data) => {
-//           this.complaintsList = data;
-//       });
-//   },
+  mounted() {
+    fetch("/api/complaints/test")
+      .then((response) => response.text())
+      .then((data) => {
+          console.log(data)
+          this.complaintsList = data;
+      });
+  },
     methods: {
     }
 }

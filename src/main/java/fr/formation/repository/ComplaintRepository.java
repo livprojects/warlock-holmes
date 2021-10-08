@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import fr.formation.models.Complaint;
 
+
 public interface ComplaintRepository extends Repository<Complaint>{
 
 	Optional<Complaint> get(int id);

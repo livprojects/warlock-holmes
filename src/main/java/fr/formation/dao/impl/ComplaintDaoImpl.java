@@ -29,6 +29,8 @@ public class ComplaintDaoImpl implements ComplaintDao {
 
 	@Override
 	public List<Complaint> getAll() {
+		
+		System.out.println();
 		Query query = entityManager.createQuery("SELECT c FROM Complaint c");
         return query.getResultList();
 	}
