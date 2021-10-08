@@ -19,37 +19,13 @@ public class Clue {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "id")
+	@Column(name = "clue_id")
 	private int id;
 	
-	@Column(name = "description")
+	@Column(name = "clue_description")
 	private String description;
 
-	@Column(name = "imageUrl")
+	@Column(name = "clue_image_url")
 	private String imageUrl;
-	
-	public Clue(String description, String imageUrl) {
-		super();
-		this.description = description;
-		this.imageUrl = imageUrl;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	public String getImageUrl() {
-		return imageUrl;
-	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
-	}
-
-	public int getId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 }
