@@ -6,7 +6,7 @@
              
 
              <div class="heading">
-                 <h4> Navigation <h4>
+                 <h4> Navigation </h4>
                 
             </div>
 
