@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/Home.vue'
+import Clues from '../components/Clues.vue'
+import Complaints from '../components/Complaints.vue'
+import Detective from '../components/Detective.vue'
+import NavBarAdmin from '../components/NavBarAdmin.vue'
+import NavBarLieux from '../components/NavBarLieux.vue'
 
 Vue.use(VueRouter)
 
@@ -40,6 +45,8 @@ const routes = [
   {
     path: '/navbar',
     name: 'NavBarLieux',
+    component: NavBarLieux,
+
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -48,6 +55,7 @@ const routes = [
   {
   path: '/cellules',
   name: 'Cells',
+  component: Cells,
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
