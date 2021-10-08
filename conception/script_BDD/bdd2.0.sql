@@ -1,14 +1,10 @@
--- Création BDD
--- CREATE DATABASE warlock-holmes COLLATE utf8_general_ci;
--- USE db_name;
-
-CREATE TABLE User(
-	user_id SERIAL PRIMARY KEY,
-	user_name varchar(50),
-	user_nickname varchar(50),
-	user_pseudo varchar(50),
-	user_email varchar(100) NOT NULL,
-	user_pw varchar(25)
+CREATE TABLE Player(
+	player_id SERIAL PRIMARY KEY,
+	player_name varchar(50),
+	player_nickname varchar(50),
+	player_pseudo varchar(50),
+	player_email varchar(100) NOT NULL,
+	player_pw varchar(25)
 );
 
 CREATE TABLE Suspect(
@@ -22,7 +18,6 @@ CREATE TABLE Suspect(
 
 CREATE TABLE Clue(
 	clue_id INTEGER NOT NULL PRIMARY KEY,
-	FOREIGN KEY (clue_id) REFERENCES Complaint(complaint_id),
 	clue_description varchar(255),
 	clue_image_url varchar(255)
 );
@@ -31,10 +26,16 @@ CREATE TABLE Affaire(
 	affaire_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
 	affaire_plaintive_name varchar(50),
 	affaire_report varchar(255),
-	affaire_url_illustration varchar(100)	
+	affaire_url_illustration varchar(100),
 	affaire_complaint_id int,
 	affaire_suspect_id int,
 	affaire_clue_id int,
 	FOREIGN KEY (affaire_suspect_id) references suspect(suspect_id),
 	FOREIGN KEY (affaire_clue_id) references clue(clue_id)
 );
+
+ALTER TABLE clue
+	ADD constraint PK_case_id
+    FOREIGN KEY (clue_id)
+    REFERENCES Affaire(affaire_id)
+    ON DELETE CASCADE;
