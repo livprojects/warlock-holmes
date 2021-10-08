@@ -13,6 +13,7 @@ const routes = [
   {
     path: '/complaints',
     name: 'Complaints',
+    component: Complaints,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -21,6 +22,7 @@ const routes = [
   {
     path: '/clues',
     name: 'Clues',
+    component: Clues,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -29,6 +31,7 @@ const routes = [
   {
     path: '/detective',
     name: 'DetectivesOffice',
+    component: Detective,
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
