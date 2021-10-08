@@ -18,61 +18,22 @@ public class Suspect {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "id")
+	@Column(name = "suspect_id")
 	private int id;
 	
-	@Column(name = "name")
+	@Column(name = "suspect_name")
 	private String name;
 	
-	@Column(name = "surname")
-	private String surname;
+	@Column(name = "suspect_nickname")
+	private String nickname;
 	
-	@Column(name = "occupation")
+	@Column(name = "suspect_occupation")
 	private String occupation;
 	
-	@Column(name = "alibi")
+	@Column(name = "suspect_alibi")
 	private String alibi;
 	
-	@Column(name = "urlPhoto")
+	@Column(name = "suspect_url_photo")
 	private String urlPhoto;
-	
-	
-	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getSurname() {
-		return surname;
-	}
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
-	public String getOccupation() {
-		return occupation;
-	}
-	public void setOccupation(String occupation) {
-		this.occupation = occupation;
-	}
-	public String getAlibi() {
-		return alibi;
-	}
-	public void setAlibi(String alibi) {
-		this.alibi = alibi;
-	}
-	public String getUrlPhoto() {
-		return urlPhoto;
-	}
-	public void setUrlPhoto(String urlPhoto) {
-		this.urlPhoto = urlPhoto;
-	}
-	
+		
 }

@@ -1,7 +1,5 @@
 package fr.formation.models;
 
-import lombok.Data;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,22 +8,32 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "clue")
-public class Clue {
+@Table(name = "player")
+public class Player {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "clue_id")
+	@Column(name = "player_id")
 	private int id;
 	
-	@Column(name = "clue_description")
-	private String description;
+	@Column(name = "player_name")
+	private String name;
 
-	@Column(name = "clue_image_url")
-	private String imageUrl;
+	@Column(name = "player_surname")
+	private String surname;
 	
+	@Column(name = "player_pseudo")
+	private String pseudo;
+	
+	@Column(name = "player_email")
+	private String email;
+	
+	@Column(name = "player_pw")
+	private String password;
+		
 }
