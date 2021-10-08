@@ -18,7 +18,7 @@ public class Suspect {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "id")
+	@Column(name = "suspect_id")
 	private int id;
 	
 	@Column(name = "suspect_name")
