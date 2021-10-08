@@ -14,7 +14,8 @@
              <div class="cells-main-closet">
              <p>Tu es dans les Cellules, où tu peux voir les différents suspects. Attention, certains mordent !</p>   
                  <!-- <div v-for="suspect in listeSuspects" :key="suspect.name" class="suspects"> -->
-                 <div v-for="suspect in listeTest" :key="suspect" class="suspects">
+                 <div v-for="suspect in listeTest" :key="suspect.name" class="suspects">
+                     <!-- TODO : un générateur à la place du ", dit" avec des ", aussi appelé ", ", connu comme " etc-->
                      <p>Identité du suspect : {{suspect.name}}, dit {{suspect.surname}}</p>
                      <p>Occupation : {{suspect.occupation}} </p>		
                      <p>Alibi : {{suspect.alibi}} </p>
@@ -39,14 +40,18 @@ export default {
         // TODO listeSuspects
     listeTest:[
         {
-        suspect: "Toto", 
-        procesVerbal:"Tatata", 
-        urlIllustration: "https://static.posters.cz/image/1300/posters-muraux/cute-kitten-i77094.jpg"
+        name: "Toto", 
+        surname: "la Fripouille",
+        occupation: "huissier",
+        alibi: "j'peux pas, j'ai piscine", 
+        urlPhoto: "https://static.posters.cz/image/1300/posters-muraux/cute-kitten-i77094.jpg"
         }, 
                 {
-        plaignant: "Ttutu", 
-        procesVerbal:"patatati patatata", 
-        urlIllustration: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJMvPpFn8ZPh19QDb2JnwuXvgmmEUyMlJoKg&usqp=CAU"
+        name: "Tutu", 
+        surname: "le Mordeur Fou",
+        occupation: "goûteur",
+        alibi: "mais c'était trop boooon !", 
+        urlPhoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJMvPpFn8ZPh19QDb2JnwuXvgmmEUyMlJoKg&usqp=CAU"
         }
         ],
     //   complaintsList: []
