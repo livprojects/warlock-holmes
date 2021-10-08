@@ -3,14 +3,14 @@ package fr.formation.repository;
 import java.util.List;
 import java.util.Optional;
 
-import fr.formation.models.Affaire;
+import fr.formation.models.CurrentCase;
 
-public interface AffaireRepository extends Repository<Affaire> {
+public interface CurrentCaseRepository extends Repository<CurrentCase> {
 
-	Optional<Affaire> get(int id);
-	List<Affaire> getAll();
-	void add(Affaire affaire);
-	void update(Affaire affaire);
-	void remove(Affaire affaire);
+	Optional<CurrentCase> get(int id);
+	List<CurrentCase> getAll();
+	void add(CurrentCase affaire);
+	void update(CurrentCase affaire);
+	void remove(CurrentCase affaire);
 	
 }

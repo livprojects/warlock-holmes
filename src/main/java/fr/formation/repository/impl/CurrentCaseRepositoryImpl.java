@@ -3,36 +3,39 @@ package fr.formation.repository.impl;
 import java.util.List;
 import java.util.Optional;
 
-import fr.formation.dao.impl.AffaireDaoImpl;
-import fr.formation.models.Affaire;
-import fr.formation.repository.AffaireRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class AffaireRepositoryImpl implements AffaireRepository {
+import fr.formation.dao.impl.CurrentCaseDaoImpl;
+import fr.formation.models.CurrentCase;
+import fr.formation.repository.CurrentCaseRepository;
 
-	private AffaireDaoImpl affaireDaoImpl;
+public class CurrentCaseRepositoryImpl implements CurrentCaseRepository {
+
+	@Autowired
+	private CurrentCaseDaoImpl currentCaseDaoImpl;
 
 	@Override
-	public Optional<Affaire> get(int id) {
-		return affaireDaoImpl.get(id);
+	public Optional<CurrentCase> get(int id) {
+		return currentCaseDaoImpl.get(id);
 	}
 
 	@Override
-	public List<Affaire> getAll() {
-		return affaireDaoImpl.getAll();
+	public List<CurrentCase> getAll() {
+		return currentCaseDaoImpl.getAll();
 	}
 
 	@Override
-	public void add(Affaire affaire) {
-		affaireDaoImpl.add(affaire);
+	public void add(CurrentCase affaire) {
+		currentCaseDaoImpl.add(affaire);
 	}
 
 	@Override
-	public void update(Affaire affaire) {
-		affaireDaoImpl.update(affaire);
+	public void update(CurrentCase affaire) {
+		currentCaseDaoImpl.update(affaire);
 	}
 
 	@Override
-	public void remove(Affaire affaire) {
-		affaireDaoImpl.delete(affaire);
+	public void remove(CurrentCase affaire) {
+		currentCaseDaoImpl.delete(affaire);
 	}
 }

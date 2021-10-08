@@ -3,14 +3,14 @@ package fr.formation.dao;
 import java.util.Collection;
 import java.util.Optional;
 
-import fr.formation.models.Affaire;
+import fr.formation.models.CurrentCase;
 
-public interface AffaireDao extends Dao<Affaire> {
+public interface CurrentCaseDao extends Dao<CurrentCase> {
 	
-	Optional<Affaire> get(int id);
-	Collection<Affaire> getAll();
-	void add(Affaire affaire);
-	void update(Affaire affaire);
-	void delete(Affaire affaire);
+	Optional<CurrentCase> get(int id);
+	Collection<CurrentCase> getAll();
+	void add(CurrentCase affaire);
+	void update(CurrentCase affaire);
+	void delete(CurrentCase affaire);
 	
 }

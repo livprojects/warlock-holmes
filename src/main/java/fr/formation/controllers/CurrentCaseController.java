@@ -12,27 +12,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.formation.models.Complaint;
-import fr.formation.repository.ComplaintRepository;
+import fr.formation.models.CurrentCase;
+import fr.formation.repository.CurrentCaseRepository;
 
 
 @RestController
-@RequestMapping("/complaints")
-public class ComplaintController  {
+@RequestMapping("/cases")
+public class CurrentCaseController  {
 
 	@Autowired
-	private final ComplaintRepository complaintRepository = null;
+	private final CurrentCaseRepository currentCaseRepository = null;
 	
-	@GetMapping("/test")
-	public List<Complaint> getAll(){
+	@GetMapping
+	public List<CurrentCase> getAll(){
 		System.out.println("Arrivée dans le controller");
-		List<Complaint> plaintes = complaintRepository.getAll();
+		List<CurrentCase> plaintes = currentCaseRepository.getAll();
 		System.out.println("TEST PLAINTES - " + plaintes);
-		return complaintRepository.getAll();
+		return currentCaseRepository.getAll();
 	}
 
 	@GetMapping("/suspects/{id}")
-	public Optional<Complaint> get(@RequestBody Complaint complaint, @PathVariable int id){
-		return complaintRepository.get(id);
+	public Optional<CurrentCase> get(@RequestBody Complaint complaint, @PathVariable int id){
+		return currentCaseRepository.get(id);
 	}
 	
 	// TODO Add et update ? Or not ?

@@ -32,7 +32,7 @@ public class Complaint {
 	
 	@OneToOne
 	@JoinColumn(name = "linkedCase")
-	private Affaire linkedCase;
+	private CurrentCase linkedCase;
 	
 	@Column(name="urlIllustration")
 	private String urlIllustration;
