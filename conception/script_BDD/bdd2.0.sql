@@ -25,7 +25,6 @@ CREATE TABLE Affaire(
     affaire_plaintive_name varchar(50),
     affaire_report varchar(255),
     affaire_url_illustration varchar(100),   
-    affaire_complaint_id int,
     affaire_suspect_id int,
     affaire_clue_id int,
     FOREIGN KEY (affaire_suspect_id) references suspect(suspect_id),
