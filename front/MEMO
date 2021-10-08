@@ -1,0 +1,20 @@
+Lancer le projet :
+
+Lancer le projet back en mode Java Application (en lançant le serveur ça plante)
+Lancer le projet front avec npm run serve à partir du dossier front
+
+Tester le projet :
+
+Est-ce qu'on peut visualiser une page front en vue sur le navigateur pour voir ce que ça donne ?
+Si tu as renseigné le path de ta vue dans le fichier routeur, 
+tu lances le front avec npm run serve
+tu vas sur localhost:3000/path-de-ta-vue
+
+VF <-> VA
+
+Indice = Clue 
+Plainte = Complaint
+Affaire = Case
+Suspect = Suspect 
+Cellule = Cell
+Utilisateur = User
