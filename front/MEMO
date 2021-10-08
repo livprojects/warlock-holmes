@@ -9,6 +9,8 @@ Est-ce qu'on peut visualiser une page front en vue sur le navigateur pour voir c
 Si tu as renseigné le path de ta vue dans le fichier routeur, 
 tu lances le front avec npm run serve
 tu vas sur localhost:3000/path-de-ta-vue
+ex : localhost:3000/cellules
+Parfois faut rajouter un # au milieu ? http://localhost:3000/#/cellules
 
 VF <-> VA
 
