@@ -28,9 +28,11 @@ public class Affaire {
 	@JoinColumn(name = "id")
 	private Complaint complaint_id;
 	
+	@OneToOne
 	@JoinColumn(name="id")
 	private Suspect suspect_id;
 	
+	@OneToOne
 	@JoinColumn(name="id")
 	private Clue clue_id;
 	
