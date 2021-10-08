@@ -21,24 +21,24 @@ public class CurrentCase {
 	// Pour CaseRepositoryImpl, complaint_id sera l'id principal
 	@Id //OBLIGATOIRE UNE FOIS (ET UNE SEULE) DANS UNE CLASSE ENTITY
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //STRATEGIE D'AUTO-INCREMENT SUR CET ID
-	@Column(name = "affaire_id") //OPTIONEL (SI LE NOM DU CHAMP == LE NOM DE L'ATTRIBUT)
+	@Column(name = "current_case_id") //OPTIONEL (SI LE NOM DU CHAMP == LE NOM DE L'ATTRIBUT)
 	private int id;
 	
-	@Column(name = "affaire_plaintive_name")
+	@Column(name = "current_case_plaintive_name")
 	private String plaintiveName;
 	
-	@Column(name= "affaire_report")
+	@Column(name= "current_case_report")
 	private String report;
 	
-	@Column(name="affaire_url_illustration")
+	@Column(name="current_case_url_illustration")
 	private String urlIllustration;
 	
 	@OneToOne
-	@JoinColumn(name="affaire_suspect_id")
+	@JoinColumn(name="current_case_suspect_id")
 	private Suspect suspect_id;
 	
 	@OneToOne
-	@JoinColumn(name="affaire_clue_id")
+	@JoinColumn(name="current_case_clue_id")
 	private Clue clue_id;
 	
 

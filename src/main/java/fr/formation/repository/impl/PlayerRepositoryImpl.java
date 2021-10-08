@@ -1,12 +1,16 @@
 package fr.formation.repository.impl;
 
 import java.util.List;
+
 import java.util.Optional;
+
+import org.springframework.stereotype.Repository;
 
 import fr.formation.dao.impl.PlayerDaoImpl;
 import fr.formation.models.Player;
 import fr.formation.repository.PlayerRepository;
 
+@Repository
 public class PlayerRepositoryImpl implements PlayerRepository {
 
 	private PlayerDaoImpl userDaoImpl;

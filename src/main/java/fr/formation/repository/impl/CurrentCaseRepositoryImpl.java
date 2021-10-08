@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import fr.formation.dao.impl.CurrentCaseDaoImpl;
 import fr.formation.models.CurrentCase;
 import fr.formation.repository.CurrentCaseRepository;
 
+@Repository
 public class CurrentCaseRepositoryImpl implements CurrentCaseRepository {
 
 	@Autowired

@@ -30,3 +30,4 @@ CREATE TABLE current_case(
     FOREIGN KEY (current_case_suspect_id) references suspect(suspect_id),
     FOREIGN KEY (current_case_clue_id) references clue(clue_id)
 );
+
