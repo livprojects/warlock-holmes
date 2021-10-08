@@ -9,30 +9,30 @@ import fr.formation.repository.UserRepository;
 
 public class UserRepositoryImpl implements UserRepository {
 
-	private UserDaoImpl caseDaoImpl;
+	private UserDaoImpl userDaoImpl;
 
 	@Override
-	public Optional<User> get(User user) {
-		return caseDaoImpl.get(user.getId());
+	public Optional<User> get(int id) {
+		return userDaoImpl.get(id);
 	}
 
 	@Override
 	public List<User> getAll() {
-		return caseDaoImpl.getAll();
+		return userDaoImpl.getAll();
 	}
 
 	@Override
 	public void add(User user) {
-		caseDaoImpl.add(user);
+		userDaoImpl.add(user);
 	}
 
 	@Override
 	public void update(User user) {
-		caseDaoImpl.update(user);
+		userDaoImpl.update(user);
 	}
 
 	@Override
 	public void remove(User user) {
-		caseDaoImpl.delete(user);
+		userDaoImpl.delete(user);
 	}
 }

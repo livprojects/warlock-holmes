@@ -7,7 +7,7 @@ import fr.formation.models.Clue;
 
 public interface ClueRepository extends Repository<Clue> {
 
-	Optional<Clue> get(Clue clue);
+	Optional<Clue> get(int id);
 	List<Clue> getAll();
 	void add(Clue clue);
 	void update(Clue clue);

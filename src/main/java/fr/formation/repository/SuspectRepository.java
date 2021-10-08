@@ -7,7 +7,7 @@ import fr.formation.models.Suspect;
 
 public interface SuspectRepository extends Repository<Suspect>{
 
-	Optional<Suspect> get(Suspect suspect);
+	Optional<Suspect> get(int id);
 	List<Suspect> getAll();
 	void add(Suspect suspect);
 	void update(Suspect suspect);

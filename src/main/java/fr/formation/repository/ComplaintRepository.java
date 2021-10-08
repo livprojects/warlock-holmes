@@ -7,7 +7,7 @@ import fr.formation.models.Complaint;
 
 public interface ComplaintRepository extends Repository<Complaint>{
 
-	Optional<Complaint> get(Complaint complaint);
+	Optional<Complaint> get(int id);
 	List<Complaint> getAll();
 	void add(Complaint complaint);
 	void update(Complaint complaint);

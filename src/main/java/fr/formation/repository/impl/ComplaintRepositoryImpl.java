@@ -9,30 +9,30 @@ import fr.formation.repository.ComplaintRepository;
 
 public class ComplaintRepositoryImpl implements ComplaintRepository {
 
-	private ComplaintDaoImpl caseDaoImpl;
+	private ComplaintDaoImpl complaintDaoImpl;
 
 	@Override
-	public Optional<Complaint> get(Complaint complaint) {
-		return caseDaoImpl.get(complaint.getId());
+	public Optional<Complaint> get(int id) {
+		return complaintDaoImpl.get(id);
 	}
 
 	@Override
 	public List<Complaint> getAll() {
-		return caseDaoImpl.getAll();
+		return complaintDaoImpl.getAll();
 	}
 
 	@Override
 	public void add(Complaint complaint) {
-		caseDaoImpl.add(complaint);
+		complaintDaoImpl.add(complaint);
 	}
 
 	@Override
 	public void update(Complaint complaint) {
-		caseDaoImpl.update(complaint);
+		complaintDaoImpl.update(complaint);
 	}
 
 	@Override
 	public void remove(Complaint complaint) {
-		caseDaoImpl.delete(complaint);
+		complaintDaoImpl.delete(complaint);
 	}
 }

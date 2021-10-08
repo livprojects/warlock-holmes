@@ -57,13 +57,6 @@ export default {
     //   complaintsList: []
     }
   },
-//   mounted() {
-//     fetch("/api/complaints/")
-//       .then((response) => response.text())
-//       .then((data) => {
-//           this.complaintsList = data;
-//       });
-//   },
     methods: {
     }
 }

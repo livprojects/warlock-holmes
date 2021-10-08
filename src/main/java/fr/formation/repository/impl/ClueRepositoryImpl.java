@@ -9,30 +9,30 @@ import fr.formation.repository.ClueRepository;
 
 public class ClueRepositoryImpl implements ClueRepository {
 
-	private ClueDaoImpl caseDaoImpl;
+	private ClueDaoImpl clueDaoImpl;
 
 	@Override
-	public Optional<Clue> get(Clue clue) {
-		return caseDaoImpl.get(clue.getId());
+	public Optional<Clue> get(int id) {
+		return clueDaoImpl.get(id);
 	}
 
 	@Override
 	public List<Clue> getAll() {
-		return caseDaoImpl.getAll();
+		return clueDaoImpl.getAll();
 	}
 
 	@Override
 	public void add(Clue clue) {
-		caseDaoImpl.add(clue);
+		clueDaoImpl.add(clue);
 	}
 
 	@Override
 	public void update(Clue clue) {
-		caseDaoImpl.update(clue);
+		clueDaoImpl.update(clue);
 	}
 
 	@Override
 	public void remove(Clue clue) {
-		caseDaoImpl.delete(clue);
+		clueDaoImpl.delete(clue);
 	}
 }

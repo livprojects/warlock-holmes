@@ -9,30 +9,30 @@ import fr.formation.repository.SuspectRepository;
 
 public class SuspectRepositoryImpl implements SuspectRepository {
 
-	private SuspectDaoImpl caseDaoImpl;
+	private SuspectDaoImpl suspectDaoImpl;
 
 	@Override
-	public Optional<Suspect> get(Suspect suspect) {
-		return caseDaoImpl.get(suspect.getId());
+	public Optional<Suspect> get(int id) {
+		return suspectDaoImpl.get(id);
 	}
 
 	@Override
 	public List<Suspect> getAll() {
-		return caseDaoImpl.getAll();
+		return suspectDaoImpl.getAll();
 	}
 
 	@Override
 	public void add(Suspect suspect) {
-		caseDaoImpl.add(suspect);
+		suspectDaoImpl.add(suspect);
 	}
 
 	@Override
 	public void update(Suspect suspect) {
-		caseDaoImpl.update(suspect);
+		suspectDaoImpl.update(suspect);
 	}
 
 	@Override
 	public void remove(Suspect suspect) {
-		caseDaoImpl.delete(suspect);
+		suspectDaoImpl.delete(suspect);
 	}
 }

@@ -7,7 +7,7 @@ import fr.formation.models.User;
 
 public interface UserRepository extends Repository<User>{
 
-	Optional<User> get(User user);
+	Optional<User> get(int id);
 	List<User> getAll();
 	void add(User user);
 	void update(User user);

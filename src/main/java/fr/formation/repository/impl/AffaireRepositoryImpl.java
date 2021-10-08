@@ -9,30 +9,30 @@ import fr.formation.repository.AffaireRepository;
 
 public class AffaireRepositoryImpl implements AffaireRepository {
 
-	private AffaireDaoImpl caseDaoImpl;
+	private AffaireDaoImpl affaireDaoImpl;
 
 	@Override
-	public Optional<Affaire> get(Affaire affaire) {
-		return caseDaoImpl.get(affaire.getMain_id());
+	public Optional<Affaire> get(int id) {
+		return affaireDaoImpl.get(id);
 	}
 
 	@Override
 	public List<Affaire> getAll() {
-		return caseDaoImpl.getAll();
+		return affaireDaoImpl.getAll();
 	}
 
 	@Override
 	public void add(Affaire affaire) {
-		caseDaoImpl.add(affaire);
+		affaireDaoImpl.add(affaire);
 	}
 
 	@Override
 	public void update(Affaire affaire) {
-		caseDaoImpl.update(affaire);
+		affaireDaoImpl.update(affaire);
 	}
 
 	@Override
 	public void remove(Affaire affaire) {
-		caseDaoImpl.delete(affaire);
+		affaireDaoImpl.delete(affaire);
 	}
 }
