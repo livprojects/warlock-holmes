@@ -1,11 +1,11 @@
 
-CREATE TABLE User(
-    user_id SERIAL PRIMARY KEY,
-    user_name varchar(50),
-    user_nickname varchar(50),
-    user_pseudo varchar(50),
-    user_email varchar(100) NOT NULL,
-    user_pw varchar(25)
+CREATE TABLE Player(
+    player_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    player_name varchar(50),
+    player_nickname varchar(50),
+    player_pseudo varchar(50),
+    player_email varchar(100) NOT NULL,
+    player_pw varchar(25)
 );
 CREATE TABLE Suspect(
     suspect_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -24,7 +24,7 @@ CREATE TABLE Affaire(
     affaire_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     affaire_plaintive_name varchar(50),
     affaire_report varchar(255),
-    affaire_url_illustration varchar(100)   
+    affaire_url_illustration varchar(100),   
     affaire_complaint_id int,
     affaire_suspect_id int,
     affaire_clue_id int,
