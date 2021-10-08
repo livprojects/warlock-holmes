@@ -9,11 +9,11 @@ import javax.persistence.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import fr.formation.dao.UserDao;
-import fr.formation.models.User;
+import fr.formation.dao.PlayerDao;
+import fr.formation.models.Player;
 
 @Component
-public class UserDaoImpl implements UserDao {
+public class PlayerDaoImpl implements PlayerDao {
 
 	// TODO 
 	//  Vérifier si c'est bon, j'ai suivi ça 
@@ -23,28 +23,28 @@ public class UserDaoImpl implements UserDao {
 	private final EntityManager entityManager = null;
 	
 	@Override
-	public Optional<User> get(int id) {
-		return Optional.ofNullable(entityManager.find(User.class, id));
+	public Optional<Player> get(int id) {
+		return Optional.ofNullable(entityManager.find(Player.class, id));
 	}
 
 	@Override
-	public List<User> getAll() {
+	public List<Player> getAll() {
 		Query query = entityManager.createQuery("SELECT c FROM User c");
         return query.getResultList();
 	}
 	
 	@Override
-	public void add(User user) {
+	public void add(Player user) {
 		entityManager.persist(user);
 	}
 	
 	@Override
-	public void update(User user) {
+	public void update(Player user) {
 		entityManager.persist(user);
 	}
 
 	@Override
-	public void delete(User user) {
+	public void delete(Player user) {
 		entityManager.remove(user);				
 	}
 

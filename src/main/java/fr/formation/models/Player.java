@@ -13,27 +13,27 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "suspect")
-public class Suspect {
+@Table(name = "player")
+public class Player {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "id")
+	@Column(name = "player_id")
 	private int id;
 	
-	@Column(name = "suspect_name")
+	@Column(name = "player_name")
 	private String name;
+
+	@Column(name = "player_surname")
+	private String surname;
 	
-	@Column(name = "suspect_nickname")
-	private String nickname;
+	@Column(name = "player_pseudo")
+	private String pseudo;
 	
-	@Column(name = "suspect_occupation")
-	private String occupation;
+	@Column(name = "player_email")
+	private String email;
 	
-	@Column(name = "suspect_alibi")
-	private String alibi;
-	
-	@Column(name = "suspect_url_photo")
-	private String urlPhoto;
+	@Column(name = "player_pw")
+	private String password;
 		
 }
