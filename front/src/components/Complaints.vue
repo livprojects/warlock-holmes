@@ -1,16 +1,6 @@
 <template>
- <div>
-     <header>
-             <h1>Warlock Holmes</h1>  
-             <h2>Le bureau des plaintes</h2>
-         </header>
-     
-         <main>
-             <div class="clues-left-nav">
-                 <!-- Inclure la navigation administrative -->
-             </div>
-     
-     
+ <div id="complaints">
+          
              <div class="clues-main-closet">
              <p>Tu es ici au point de départ de l'enquête. Sur ce tableau, tu trouveras toutes les affaires que nous avons enregistrées et qui n'ont pas encore été résolues à ce jour.</p>               
                  <div v-for="complaint in listeTest" :key="complaint.plaignant" class="plainte">
@@ -19,12 +9,6 @@
                       <img :src="complaint.urlIllustration"/>  
                  </div>
              </div>
-     
-     
-             <div class="clues-right-nav">
-                <!-- Inclure la navigation narrative -->
-             </div>
-         </main>
  </div>
 </template>
 

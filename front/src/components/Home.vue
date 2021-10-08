@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <h2>Warlock Holmes : Un Cluedo revisit� super fun !</h2>
+    <h2>Warlock Holmes : Un Cluedo revisité super fun !</h2>
           
           
     
@@ -26,11 +26,11 @@
             Quibusdam nisi fugit quo est. Lorem ipsum ad minim ven. Lorem ipsum
             dolor sit amet.</p>
     
-          <h3>D�butez votre enqu�te avec Warlock Holmes !</h3>
+          <h3>Débutez votre enquête avec Warlock Holmes !</h3>
           
           <button onclick="/signup">Je m'inscris !</button>
           
-          <h3> Vous �tes d�j� d�tective chez nous ? Connectez-vous !</h3>
+          <h3> Vous êtes déjà détective chez nous ? Connectez-vous !</h3>
           
           <button onclick="/login">Je m'identifie !</button>
   </div>

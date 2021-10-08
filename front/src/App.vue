@@ -43,6 +43,7 @@
 </script>
 
 <style>
+
 main {
 	display: flex;
 }

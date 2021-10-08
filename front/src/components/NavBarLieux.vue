@@ -16,7 +16,7 @@
                 <li class='nav-link'> <router-link to="/detective">Bureau du détective</router-link> </li>
                 <li class='nav-link'> <router-link to="/complaints">Bureau des plaintes</router-link> </li>
                 <li class='nav-link'> <router-link to="/clues"> Indices </router-link> </li>
-                <li class='nav-link'> <router-link to="/suspects"> Suspects </router-link> </li>
+                <li class='nav-link'> <router-link to="/cellules"> Suspects </router-link> </li>
                 <li class='nav-link'> <router-link to="/cases"> Affaires </router-link> </li>
 
             </ul>
