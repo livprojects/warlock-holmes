@@ -8,7 +8,7 @@
 
       <!-- Nav bar -->
       <div class="clues-left-nav">
-        <!-- Insérer composant navigation admin -->
+        <NavBarAdmin></NavBarAdmin>
       </div>
 
       <!-- Centre de la page : Affiche le composant principal -->
@@ -23,22 +23,19 @@
     </main>
 
     <!-- Footer contact et CopyRight -->
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-  import Home from './components/Home.vue';
+  import NavBarAdmin from './components/NavBarAdmin.vue';
   import Footer from'./components/Footer.vue';
 
   export default {
     name: 'App',
     components: {
-      Home,
-      Footer
+      Footer, 
+      NavBarAdmin
     }
   }
 </script>
-
-<style>
-  @import '../assets/css/app.css';
-</style>
