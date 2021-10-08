@@ -1,0 +1,21 @@
+main {
+	display: flex;
+}
+
+.clues-left-nav {
+	width: 20%;	
+}
+
+
+.clues-right-nav {
+	
+	width: 20%;
+	
+}
+
+.button {
+	background-color: red;
+	color:white;
+	padding: 15px 32px;
+  	text-align: center;
+} 

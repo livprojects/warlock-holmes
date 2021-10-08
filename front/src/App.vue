@@ -1,34 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- TODO : déplacer dans une nav -->
-      <!-- <router-link to="/">Accueil</router-link> |
-      <router-link to="/complaints">Bureau des plaintes</router-link> -->
-    </div>
-    <router-view/>
+    
+    <header>
+      <h1> Warlock Holmes</h1>
+    </header>
+    <main>
+
+      <!-- Nav bar -->
+      <div class="clues-left-nav">
+        <!-- Insérer composant navigation admin -->
+      </div>
+
+      <!-- Centre de la page : Affiche le composant principal -->
+      <div class="main-component">
+        <router-view />
+      </div>
+
+
+      <div class="clues-right-nav">
+        <!-- Insérer composant navigation lieux -->
+      </div>
+    </main>
+
+    <!-- Footer contact et CopyRight -->
   </div>
 </template>
 
+<script>
+  import Home from './components/Home.vue';
+  import Footer from'./components/Footer.vue';
+
+  export default {
+    name: 'App',
+    components: {
+      Home,
+      Footer
+    }
+  }
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  @import '../assets/css/app.css';
 </style>
