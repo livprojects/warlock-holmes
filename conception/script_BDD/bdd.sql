@@ -1,5 +1,5 @@
 -- Création BDD
--- CREATE DATABASE db_name COLLATE utf8_general_ci;
+-- CREATE DATABASE warlock-holmes COLLATE utf8_general_ci;
 -- USE db_name;
 
 CREATE TABLE Player(
@@ -22,8 +22,7 @@ CREATE TABLE Complaint(
 	plaintiveName varchar(50),
 	report varchar(255),
 	linkedCase integer,
-	urlIllustration varchar(100),
-	FOREIGN KEY (linkedCase) REFERENCES Affaire(id)
+	urlIllustration varchar(100)
 	
 );
 
@@ -44,13 +43,13 @@ INSERT INTO Suspect(name, surname, occupation, alibi, urlPhoto) VALUES ('Sarah',
 
 CREATE TABLE Clue(
 	id INTEGER NOT NULL PRIMARY KEY,
-	FOREIGN KEY (id) REFERENCES Complaints(id),
+	FOREIGN KEY (id) REFERENCES Complaint(id),
 	description varchar(255),
 	imageUrl varchar(255)
 	
 );
 
-INSERT INTO Clue(id, description, imageUrl) VALUES (1, 'Un couteau très coupant', 'blabla')
+INSERT INTO Clue(id, description, imageUrl) VALUES (1, 'Un couteau très coupant', 'blabla');
 
 CREATE TABLE ClueSuspectRelation(
 	ClueId Int NOT NULL UNIQUE,
@@ -64,9 +63,13 @@ CREATE TABLE Affaire(
 	complaint_id int,
 	suspect_id int,
 	clue_id int,
-	FOREIGN KEY (complaint_id) references complaints(id),
+	FOREIGN KEY (complaint_id) references complaint(id),
 	FOREIGN KEY (suspect_id) references suspect(id),
 	FOREIGN KEY (clue_id) references clue(id)
 );
 
---------------------------------------------------------------------------------
+ALTER TABLE complaint
+	ADD constraint PK_case_id
+    FOREIGN KEY (linkedCase)
+    REFERENCES Affaire(id)
+    ON DELETE CASCADE;
