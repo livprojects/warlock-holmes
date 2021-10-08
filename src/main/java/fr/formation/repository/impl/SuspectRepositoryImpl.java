@@ -3,10 +3,13 @@ package fr.formation.repository.impl;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import fr.formation.dao.impl.SuspectDaoImpl;
 import fr.formation.models.Suspect;
 import fr.formation.repository.SuspectRepository;
 
+@Repository
 public class SuspectRepositoryImpl implements SuspectRepository {
 
 	private SuspectDaoImpl suspectDaoImpl;
