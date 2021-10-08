@@ -2,7 +2,7 @@
 CREATE TABLE Player(
     player_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     player_name varchar(50),
-    player_nickname varchar(50),
+    player_surname varchar(50),
     player_pseudo varchar(50),
     player_email varchar(100) NOT NULL,
     player_pw varchar(25)
