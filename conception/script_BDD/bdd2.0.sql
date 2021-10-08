@@ -33,9 +33,3 @@ CREATE TABLE Affaire(
 	FOREIGN KEY (affaire_suspect_id) references suspect(suspect_id),
 	FOREIGN KEY (affaire_clue_id) references clue(clue_id)
 );
-
-ALTER TABLE clue
-	ADD constraint PK_case_id
-    FOREIGN KEY (clue_id)
-    REFERENCES Affaire(affaire_id)
-    ON DELETE CASCADE;
