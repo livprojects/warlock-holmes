@@ -17,18 +17,21 @@ import fr.formation.repository.SuspectRepository;
 @RestController
 @RequestMapping("/suspects")
 public class SuspectsController {
+	
+	// CONTROLLER DES SUSPECTS
+
 
 	// Basé sur https://spring.io/guides/tutorials/rest/
 
 	@Autowired
 	private final SuspectRepository suspectRepository = null;
 
-	@GetMapping
+	@GetMapping("/list")
 	public List<Suspect> getAll() {
 		return suspectRepository.getAll();
 	}
 
-	@GetMapping("/suspects/{id}")
+	@GetMapping("/{id}")
 	public Optional<Suspect> get(@RequestBody Suspect suspect, @PathVariable int id) {
 		return suspectRepository.get(id);
 	}
@@ -36,7 +39,7 @@ public class SuspectsController {
 	// TODO Add et update ? Or not ?
 
 	// TODO Pondérer si on fait ça en int ou objet
-	@PostMapping("/suspects/{id}")
+	@PostMapping("/{id}")
 	public void remove(@PathVariable int id) {
 
 		// TODO Handle exception

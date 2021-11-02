@@ -18,6 +18,8 @@ import fr.formation.repository.CurrentCaseRepository;
 @RestController
 @RequestMapping("/cases")
 public class CurrentCaseController  {
+	
+	// CONTROLLER DU BUREAU DES PLAINTES
 
 	@Autowired
 	private final CurrentCaseRepository currentCaseRepository = null;
@@ -30,7 +32,7 @@ public class CurrentCaseController  {
 		return currentCaseRepository.getAll();
 	}
 
-	@GetMapping("/suspects/{id}")
+	@GetMapping("/{id}")
 	public Optional<CurrentCase> get(@RequestBody Complaint complaint, @PathVariable int id){
 		return currentCaseRepository.get(id);
 	}
