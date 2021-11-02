@@ -45,7 +45,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../components/NavBarLieux.vue')
   },
   {
-  path: '/cellules',
+  path: '/cells',
   name: 'Cells',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
