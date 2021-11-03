@@ -3,6 +3,7 @@
     
     <header>
       <h1> Warlock Holmes</h1>
+      <img alt="monocle icon" src="./assets/monocle.png"/>
     </header>
     <main>
 
@@ -52,8 +53,15 @@ body {
 }
 
 header {
-  width: 30%;
+  display: flex;
+  width: 50%;
   margin: 3rem auto 2rem 10rem;
+}
+
+header > img {
+  width: 10rem;
+  height: auto;
+  margin-left: 1.5rem;
 }
 
 h1 {
