@@ -21,11 +21,11 @@ export default {
     }
   },
   mounted() {
-    fetch("/api/"+"cases/list")
+    fetch("/api/" + "cases/list")
       .then((response) => response.text())
       .then((data) => {
           console.log(data)
-          this.complaintsList = data;
+          //this.complaintsList = data;
       });
   },
     methods: {
